@@ -1,0 +1,15 @@
+div{
+    height: 500px;
+    width: 400px;
+    border-radius: 5%;
+    background-color:bisque;
+    margin-left: 700px;
+    margin-top: 200px;
+}
+
+
+img{
+    padding:80px;
+    padding-top: 60px;
+    border-radius: 30%;
+}

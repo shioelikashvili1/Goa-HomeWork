@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .item {
+   
+    padding: 91px;
+    box-sizing: border-box;
+    border:1px solid #000000;
+    border-radius: 3%;
+  }
+  
+ 
+  .item.small {
+    grid-column-end: span 1; 
+    background-color: aqua;
+  }
+  
+ 
+  .item.medium {
+    background-color: blueviolet;
+    grid-column-end: span 2; 
+  }
+  
+ 
+  .item.large {
+    grid-column-end: span 4; 
+    background-color: greenyellow;
+  }

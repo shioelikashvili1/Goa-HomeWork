@@ -1,0 +1,1 @@
+print("ar gvaqvs araferi")

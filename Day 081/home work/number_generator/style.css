@@ -1,0 +1,58 @@
+body{
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 100px;
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+
+    font-style: normal;
+    
+}
+
+button{
+    height: 50px;
+    width:  130px;
+    border-radius: 120px;
+    color: aliceblue;
+    background-color: black;
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+
+    font-style: normal;
+    transition: 1s;
+    position: absolute;
+    border: none;
+    outline: none;
+}
+
+button:hover{
+    color: black;
+    background-color: aliceblue;
+    transform: scale(1.2);
+    
+}
+
+
+p{
+   font-size: 50px;
+   background-color: aliceblue;
+   border-radius:25px;
+   transition: 0.5s;
+   font-family: "Bodoni Moda SC", serif;
+   font-optical-sizing: auto;
+ 
+}
+
+p:hover{
+    color: aliceblue;
+    background-color: black;
+}

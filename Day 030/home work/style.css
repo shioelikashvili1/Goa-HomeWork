@@ -1,0 +1,72 @@
+.container{
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-left: 400px;
+    width: 490px;
+    font-family: sans-serif;
+}
+
+img{
+    border-radius: 30px;
+}
+
+.child{
+    background-color: rgb(248, 249, 253);
+    width: 350px;
+    text-align: center;
+    margin-left: 80px;
+    border-radius: 20px;
+}
+
+.pay{
+    
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    width: 350px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    margin-left: 80px;
+    border-radius: 10px;
+}
+
+.button{
+    position: relative;
+    object-position: right;
+    color: rgb(137, 130, 189);
+    text-decoration: underline;
+    bottom: 25px;
+    left: 60px;
+}
+
+.note{
+    position: relative;
+    right: 70px;
+    top: 13px;
+}
+
+.girl{
+    width: 490px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+body{
+    background-image: url(/homework/day31/photos/pattern-background-desktop.png);
+    background-repeat: no-repeat;
+}
+
+.plan{
+    position: relative;
+    right: 70px;
+    bottom: 14px;
+}
+
+.price{
+    position: relative;
+    right: 15px;
+    bottom: 12px;
+}

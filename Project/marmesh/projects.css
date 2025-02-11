@@ -1,0 +1,138 @@
+body{
+    background-color: grey;
+    
+}
+
+.child1{
+    border: 2px solid black;
+    height: 500px;
+    width: 800px;
+    transition: 1s;
+    position: absolute;
+    top: 250px;
+    left: 75px;
+}
+
+.child1:hover{
+    transform: scale(1.1);
+}
+
+
+.logo {
+    height: 140px;
+    width: 160px; /* Adjust the width accordingly */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    margin-left: 35px;
+    margin-top: 18px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.Home{
+    float: right;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Genos', sans-serif;
+    transition: background-image 0.7s ease, color 0.7s ease, height 0.7s ease, width 0.7s ease, font-size 0.7s ease;
+    border-radius: 10%;
+    color: silver;
+        background: none;
+    border: none;
+    outline: none;
+}
+
+
+.About_Us{
+    float: right;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Genos', sans-serif;
+    transition: background-image 0.7s ease, color 0.7s ease, height 0.7s ease, width 0.7s ease, font-size 0.7s ease;
+    border-radius: 10%;
+    color: silver;
+         background: none;
+    border: none;
+    outline: none;
+}
+
+.Projects{ 
+    float: right;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Genos', sans-serif;
+    transition: background-image 0.7s ease, color 0.7s ease, height 0.7s ease, width 0.7s ease, font-size 0.7s ease;
+    border-radius: 10%;
+    color: silver;
+    background: none;
+    border: none;
+    outline: none;
+     
+}
+
+.Contact{
+    float: right;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: x-large;
+    color: silver;
+    border-radius: 10%;
+    font-family: 'Genos', sans-serif;
+    transition: background-image 0.7s ease, color 0.7s ease, height 0.7s ease, width 0.7s ease, font-size 0.7s ease;
+    background: none;
+    border: none;
+    outline: none;
+
+}
+
+div{
+    
+    margin-top: 40px;
+    float: right;
+    margin-right: 640px;
+    height: 50px;
+    width: 150px;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+}
+
+.Home:hover{
+    color: darkgrey;
+    font-weight: bolder;
+}
+
+.About_Us:hover{
+    color: darkgrey;
+    font-weight: bolder;
+}
+
+.Projects:hover{
+    color: darkgrey;
+    font-weight: bolder;
+}
+
+.Contact:hover{
+    color: darkgrey;
+    font-weight: bolder;
+}
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

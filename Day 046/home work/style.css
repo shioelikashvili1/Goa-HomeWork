@@ -1,0 +1,26 @@
+* {
+   
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding-top:50px ;
+    text-align: center;
+
+
+  }
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  img {
+    width: 50%;
+    height: auto;
+    border-radius: 25px;
+  }

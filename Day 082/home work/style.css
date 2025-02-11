@@ -1,0 +1,57 @@
+.mnhd{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style-type: none;
+}
+
+.nav1{
+padding-left:1200px ;
+padding-top: 50px;
+}
+
+
+.Features, .Team, .Sign{
+    background: none;
+    border: none;
+    font-size: 23px;
+    cursor: pointer;
+    color: hsl(243, 87%, 12%);
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.logo{
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+.st{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 80px;
+    padding-top: 100px;
+    z-index: 1;
+}
+
+
+.textandph{
+    display: flex;
+
+}
+
+.ilustration1{
+    height: 550px;
+    z-index: -1;
+    padding-left: 300px;
+    padding-top: 50px;
+}

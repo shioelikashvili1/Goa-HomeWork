@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headless UI Dropdown Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@headlessui/react@latest/dist/headlessui-react.production.min.js"></script>
+</head>
+<body class="h-screen flex items-center justify-center bg-gray-100">
+  <div id="app"></div>
+
+  <script type="module">
+    import { Menu, MenuButton, MenuItems, MenuItem } from 'https://unpkg.com/@headlessui/react@latest/dist/headlessui-react.esm.js';
+
+    function App() {
+      return React.createElement(
+        "div",
+        { className: "relative inline-block text-left" },
+        React.createElement(
+          Menu,
+          null,
+          React.createElement(
+            React.Fragment,
+            null,
+            React.createElement(
+              MenuButton,
+              { className: "inline-flex justify-center w-full px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none" },
+              "Options"
+            ),
+            React.createElement(
+              MenuItems,
+              { className: "absolute mt-2 w-56 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg" },
+              React.createElement(
+                "div",
+                { className: "p-1" },
+                React.createElement(MenuItem, { as: "button", className: "group flex w-full items-center px-2 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white" }, "Profile"),
+                React.createElement(MenuItem, { as: "button", className: "group flex w-full items-center px-2 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white" }, "Settings"),
+                React.createElement(MenuItem, { as: "button", className: "group flex w-full items-center px-2 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white" }, "Logout")
+              )
+            )
+          )
+        )
+      );
+    }
+
+    ReactDOM.render(React.createElement(App), document.getElementById('app'));
+  </script>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</body>
+</html>

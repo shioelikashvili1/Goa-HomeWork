@@ -1,0 +1,12 @@
+body {
+    background-color:green; /* Replace with your desired color code or name */
+  }
+  
+  p {
+    text-align: center;
+  }
+
+  p{
+    color: greenyellow;
+    background-color: black;
+  }

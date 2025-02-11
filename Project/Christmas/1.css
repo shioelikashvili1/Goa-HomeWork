@@ -1,0 +1,51 @@
+body {
+    background-image: url('https://storage.needpix.com/rsynced_images/red-black-pattern-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0; 
+    height: 100vh;
+  }
+
+
+
+  .styled-button {
+    font-family: 'Mountains of Christmas', serif;
+    padding: 10px 20px;
+    font-size: x-large;
+    border: 5px solid #58bb07b6;
+    border-radius: 40px;
+    background-color: #721404;
+    color: gold;
+    cursor: pointer;
+    margin-top: 425px;
+    margin-left: 830px;
+    height: 70px;
+    width: 220px  
+
+  }
+
+
+
+
+
+.styled-button:hover {
+   background-color: #a5210a ;
+  border-color: chartreuse;
+   color:  yellow;
+   height: 100px;
+   width: 220px;
+   font-family: 'Mountains of Christmas', serif;
+   font-size: xx-large;
+  }
+
+  
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,109 @@
+
+.background-gif{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+
+    width: 100%;
+
+
+    animation-delay: 0.5s;
+    animation-name: bf;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes bf{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.Home{
+    float: right;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Genos', sans-serif;
+    border-radius: 10%;
+    color: silver;
+        background: none;
+    border: none;
+    outline: none;
+}
+
+
+.About_Us{
+    float: right;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Genos', sans-serif;
+    border-radius: 10%;
+    color: silver;
+    background: none;
+    border: none;
+    outline: none;
+     
+}
+
+.Contact{
+    float: right;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Genos', sans-serif;
+    border-radius: 10%;
+    color: silver;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+nav{
+    background: rgb(145,106,82);
+    background: radial-gradient(circle, rgba(145,106,82,1) 0%, rgba(40,95,116,1) 100%);
+    margin-top: -50px;
+    float: right;
+    margin-right:-10px;
+    height: 100px;
+    width: 1920px;
+    font-size: x-large;
+    display: flex;
+    opacity: 0.9;
+
+}
+
+
+
+iframe{
+    display: inline-block;
+    position: relative;
+    float:right;
+    right:150px;
+    width: 700px;
+    height: 400px;
+    border-radius: 20px;
+}
+p{
+    color: orangered;
+    font-size: 40px;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+}

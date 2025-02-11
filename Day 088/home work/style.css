@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
+
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-black-blue: hsl(234, 17%, 12%);
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-image: url("./images/bg-stars.svg");
+  background-color: var(--very-dark-black-blue);
+}
+
+h2 {
+  position: absolute;
+  top: 15%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white);
+  letter-spacing: 6px;
+  margin: 0 16px;
+}
+
+.countdown {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+.mountain{
+    width: 2000px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: absolute;
+    margin-top: 600px;
+}
+
+.btn1{
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn2{
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn3{
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn1:hover{
+    scale: 150%;
+
+}
+
+.btn2:hover{
+    scale: 150%;
+}
+
+.btn3:hover{
+    scale: 150%;
+}
+
+#datetime{
+    
+    font-family: "Red Hat Text", sans-serif;
+    position: relative;
+    bottom: 45px;
+    font-size: 90px;
+    width: min-content;
+    height: min-content;
+    margin-left: 75px;
+    color: var(--soft-red);
+}
+
+.day{
+    background-color:var(--dark-desaturated-blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-top: 50px;
+    margin-right: 750px;
+}
+
+#hour{
+    font-family: "Red Hat Text", sans-serif;
+    position: relative;
+    bottom: 45px;
+    font-size: 90px;
+    width: min-content;
+    height: min-content;
+    margin-left: 55px;
+    color: var(--soft-red);
+}
+
+
+.hour{
+    position: absolute;
+    background-color:var(--dark-desaturated-blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+#minute{
+    font-family: "Red Hat Text", sans-serif;
+    position: relative;
+    bottom: 45px;
+    font-size: 90px;
+    width: min-content;
+    height: min-content;
+    margin-left: 55px;
+    color: var(--soft-red);
+}
+
+
+.minute{
+    position: absolute;
+    background-color:var(--dark-desaturated-blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-top: 50px;
+    margin-left: 500px;
+}
+
+#second{
+    font-family: "Red Hat Text", sans-serif;
+    position: relative;
+    bottom: 45px;
+    font-size: 90px;
+    width: min-content;
+    height: min-content;
+    margin-left: 55px;
+    color: var(--soft-red);
+}
+
+.second{
+    position: absolute;
+    background-color:var(--dark-desaturated-blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-top: 50px;
+    margin-left: 750px;
+
+}
+
+
+.day-1{
+    position: absolute;
+    color: var(--grayish-blue);
+    margin-top: 285px;
+    margin-left: 55px;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.hour-1{
+    position: absolute;
+    color: var(--grayish-blue);
+    margin-top: 285px;
+    margin-left: 292px;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.minute-1{
+    position: absolute;
+    color: var(--grayish-blue);
+    margin-top: 285px;
+    margin-left: 526px;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.second-1{
+    position: absolute;
+    color: var(--grayish-blue);
+    margin-top: 285px;
+    margin-left: 770px;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}

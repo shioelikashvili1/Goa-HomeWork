@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav>
+    <div class="namep"><p class="name">sneakers</p></div>
+    <button>Collections</button>
+    <button>Men</button>
+    <button>Women</button>
+    <button>About</button>
+    <button>Contact</button>
+    <div class="manandcart">
+    <img class="cart"  src="images/icon-cart.svg" alt="">
+    <img class="man"  src="images/man.png" alt="">
+    </div>
+</nav>
+
+
+
+<div class="left">
+<img class="main"  src="images/image-product-1.jpg" id="img" >
+<div class="paragraph">
+<h1 class="sc">SNEAKER COMPANY</h1>
+<p class="fles" >Fall Limited Edition <br> Sneakers </p>
+<p class="text">These low-profile sneakers are your perfect casual wear <br>
+   companion. Featuring a durable rubber outer sole, they'll <br>
+   withstand everything the weather can offer.</p>
+
+<div class="countpr">
+<p class="price" >$125,00</p>
+<div class="cartcoun">
+<div class="count">
+    <button id="decrease" onclick="decrease()">-</button>
+    <p id="quantity">1</p>
+    <button id="increase" onclick="increase()">+</button>
+    
+</div>
+<div class="cartt"><button>add to cart</button></div>
+</div>
+
+</div>
+
+</div>
+
+   
+</div>
+</div>
+
+<div class="photos">
+<button class="btn1" onclick="img.src = 'images/image-product-1.jpg'"><img class="one" src="images/1.jpg" alt=""></button>
+<button class="btn2" onclick="img.src = 'images/image-product-2.jpg'"><img class="two" src="images/image-product-2-thumbnail.jpg" alt=""></button>
+<button class="btn3" onclick="img.src = 'images/image-product-3.jpg'"><img class="three" src="images/image-product-3-thumbnail.jpg" alt=""></button>
+<button class="btn4" onclick="img.src = 'images/image-product-4.jpg'"><img class="four" src="images/image-product-4-thumbnail.jpg" alt=""></button>
+</div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

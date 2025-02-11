@@ -1,0 +1,1 @@
+export const myString = "Hello from file1!";

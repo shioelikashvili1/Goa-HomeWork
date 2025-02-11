@@ -1,0 +1,25 @@
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/013/388/288/original/red-christmas-and-new-year-typographical-on-white-background-with-winter-landscape-horizontal-new-year-background-headers-posters-cards-website-illustration-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0; 
+    height: 100vh; 
+    animation-fill-mode: forwards;
+  }
+  
+  footer {
+    background-color: #df0606;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+  

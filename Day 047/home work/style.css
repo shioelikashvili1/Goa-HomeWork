@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsla(0, 0%, 100%, 0.75);
+    
+    }
+    
+    
+    .conteiner{
+    display: flex;
+    width: 900px;
+    border-radius: 15px;
+    }
+    
+    .car{
+    color: white;
+    padding: 45px;
+    
+    }
+    .car1{
+    background-color:hsl(31, 77%, 52%) ;
+    font-family:Lexend Deca ;
+    height: 400px;
+    }
+    
+    .car2{
+    background-color:hsl(184, 100%, 22%) ;
+    font-family:Lexend Deca ;
+    height: 400px;
+    }
+    
+    .car3{
+    background-color:hsl(179, 100%, 13%) ;
+    font-family:Lexend Deca ;
+    height: 400px;
+    }
+    
+    
+    
+    
+    .meoreconteiner{
+    
+    width: 200px;
+    height: 60px;
+    border: 1px solid whitesmoke;
+    position: relative;
+    top: 40px;
+    border-radius: 15px;
+    }
+    
+    .meoreconteiner:hover{
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.1); 
+    cursor: pointer;
+    }
+    
+    .a{
+    position: relative;
+    left: 45px;
+    top: 3px;
+    }
+    
+    .mesameconteiner{
+    width: 200px;
+    height: 60px;
+    border: 1px solid whitesmoke;
+    position: relative;
+    top: 40px;
+    border-radius: 15px;
+    }
+    .s{
+    position: relative;
+    left: 45px;
+    top: 3px;
+    }
+    .mesameconteiner:hover{
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.1);
+    cursor: pointer;
+    }
+    .meotxeconteiner{
+    width: 200px;
+    height: 60px;
+    border: 1px solid whitesmoke;
+    position: relative;
+    top: 40px;
+    border-radius: 15px;
+    }
+    
+    .d{
+    position: relative;
+    left: 45px;
+    top: 3px;
+    }
+    .meotxeonteiner:hover{
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.1);
+    cursor: pointer;
+    }

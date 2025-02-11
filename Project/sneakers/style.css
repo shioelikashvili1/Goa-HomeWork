@@ -1,0 +1,229 @@
+nav{
+    margin-left: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+button{
+    height: 20px;
+    background: none;
+    border: none;
+    margin-top: 45px;
+    font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: hsl(219, 9%, 45%);
+ 
+}
+
+.name{
+    font-size: xx-large;
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: hsl(220, 13%, 13%);
+    
+}
+
+.manandcart{
+    display: flex;
+    padding-left: 440px;
+    flex-direction: row;
+    gap: 40px;
+
+}
+
+.man{
+   height: 50px;
+}
+
+.cart{
+    height: 25px;
+    padding-top:15px ;
+    
+}
+
+.main{
+    height: 300px;
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+.photos{
+    padding-left: 140px;
+}
+
+.one, .two, .three, .four{
+    height: 100px;
+    border-radius: 10px ;
+    transition: 0.3s;
+}
+
+
+.four:hover{
+    opacity: 40%;
+}
+
+.three:hover{
+    opacity: 40%;
+}
+.two:hover{
+    opacity: 40%;
+}
+.one:hover{
+    opacity: 40%;
+}
+
+
+.left{
+display: flex;
+}
+
+.sc{
+    font-size: 13px;
+    padding-left: 300px;
+    color: hsl(219, 9%, 45%);
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.fles{
+    margin-top: 10px;
+    margin-left: 300px;
+    font-size: xx-large;
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+
+}
+
+.paragraph{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.text{
+    margin-left: 300px;
+    color: hsl(219, 9%, 45%);
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+.price{
+    margin-left: 300px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.countpr{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.count{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    float: right;
+    margin-left: 300px;
+    background-color:hsl(223, 64%, 98%) ;
+    width: 100px;
+    border-radius: 10px;
+
+}
+
+#increase{
+    font-size: x-large;
+    margin-left: 20px;
+    cursor: pointer;
+    color:hsl(26, 100%, 55%) ;
+}
+
+#quantity{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 50px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+#decrease{
+    font-size: x-large;
+    cursor: pointer;
+    color: hsl(26, 100%, 55%);
+}
+
+.countpr {
+    display: flex;
+    flex-direction: column;
+}
+
+.count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 300px;
+    background-color: hsl(223, 64%, 98%);
+    width: auto;
+    border-radius: 10px;
+    padding: 10px; 
+}
+
+#increase,
+#decrease {
+    font-size: x-large;
+    cursor: pointer;
+    color: hsl(26, 100%, 55%);
+}
+
+#increase {
+    margin-left: 20px;
+}
+
+#quantity {
+    margin: 0 10px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 700;
+}
+
+.cartt {
+    position: absolute;
+    float: right;
+    margin-left: 450px;
+    
+}
+
+.cartt button {
+    
+    background-color: hsl(26, 100%, 55%);
+    color: white; 
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer; 
+    font-family: "Kumbh Sans", sans-serif; 
+    font-weight: 700;
+    height: 50px;
+}
+
+.cartt button:hover {
+    background-color: hsl(26, 100%, 45%);
+}
+
+
+.cartcoun{
+    display: flex;
+    flex-direction: row;
+
+
+}

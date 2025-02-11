@@ -1,0 +1,72 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+<form>
+    <label for="name">enter your name</label>
+    <input type="text" id="name">
+</form>
+
+
+<form>
+    <label for="last name">enter your last name</label>
+    <input type="text" id="last name">
+</form>
+
+<form id="genderForm">
+    <label>
+        <input type="radio" name="gender" value="male">
+        Male
+    </label>
+    <label>
+        <input type="radio" name="gender" value="female">
+        Female
+    </label>
+    <label>
+        <input type="radio" name="gender" value="other">
+        Other
+    </label>
+
+    <br><br>
+
+</form>
+
+
+<form>
+    <label for="email">enter your email</label>
+    <input type="text" id="email">
+</form>
+
+
+<div class="container">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+</div>
+
+</body>
+</html>
+
+
+
+<form>
+    <label for="address">enter your address</label>
+    <input type="address" id="address">
+</form>
+
+
+
+  </style>
+</head>
+<body>
+
+
+  <label for="colorPicker">Choose your favorite color:</label>
+  <input type="color" id="colorPicker" onchange="updateColor()">
+
+  <div id="colorPreview"></div>
+
+
+<input type="button" value="Submit"onclick="getSelectedGender()">

@@ -1,0 +1,63 @@
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2020/07/02/04/31/matrix-5361690_960_720.png);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+ }
+ 
+ p {
+   text-align: center;
+ }
+
+ p{
+   color: greenyellow;
+   background-color: black;
+   border-radius: 5%;
+ }
+
+header {
+   text-align: center;
+}
+
+header h1 {
+   margin: 0;
+   color: #4CAF50; /* Green color */
+}
+
+hr {
+   border: 1px solid #4CAF50;
+}
+
+.courses, .social, .join {
+   margin: 20px 0;
+}
+
+.social-btn {
+   display: inline-block;
+   margin: 10px;
+   padding: 8px 16px;
+   text-decoration: none;
+   color: #fff;
+   background-color: #4CAF50; /* Green color */
+   border: 1px solid #4CAF50;
+   border-radius: 5px;
+}
+
+.float-right {
+   float: right;
+   margin-right: 20px;
+}
+
+
+iframe {
+    border: 1px solid #00ff00; /* Green border */
+    box-shadow: 0 0 10px #00ff00; /* Green glow effect */
+    width: 560px;
+    height: 315px;
+    transform: perspective(300px) rotateX(30deg);
+    border-radius: 10%;
+}
+th:

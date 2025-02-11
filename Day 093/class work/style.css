@@ -1,0 +1,21 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+}
+
+
+.box-container{
+    width: 400px;
+    height: 400px;
+    background-color: white;    
+border-radius: 10px;}
+
+.box{
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}

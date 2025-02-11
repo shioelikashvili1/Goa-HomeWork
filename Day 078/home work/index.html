@@ -1,0 +1,21 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Text Content Example</title>
+</head>
+<body>
+    <p id="myParagraph">This is the original text.</p>
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            // Get the element by its ID
+            let paragraph = document.getElementById("myParagraph");
+            
+            // Change the text content of the element
+            paragraph.textContent = "This is the new text.";
+        }
+    </script>
+</body>
+</html>
