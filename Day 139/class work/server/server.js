@@ -20,9 +20,20 @@ app.get("/api/users", async(req, res) =>{
 try {
   const users = await Users.find()
   
-    res.status(200).json(user)
+    res.status(200).json(users)
   } catch (error) {
     res.status(500).json({error: error})
+  }
+})
+
+app.post("/api/users", async (req, res)=> {
+  const body = req.body
+  try {
+    const user = await Users.create(body)
+    res.status(201).json(user)
+  } catch (error) {
+    res.status(500).json({ error: error.message})
+    
   }
 })
 
