@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+@layer components {
+  /* flex */
+
+  .flex-center{
+    @apply flex justify-center items-center;
+  }
+
+  /* card */
+  .card {
+    @apply w-full border-2 border-blue-500 rounded-sm p-2 m-2 text-blue-400;
+  }
+  .card-red {
+    @apply  w-full border-2 border-red-500 rounded-sm p-2 m-2 text-red-400;
+  }
+}
