@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+
+body {
+    @apply bg-slate-100;
+}
+
+@layer components {
+    .card {
+        @apply border-2 border-gray-300 rounded-lg p-4;
+    }
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+}
+
+@layer base {
+    input {
+        @apply w-full border-2 border-gray-300 rounded-lg p-2;
+    }
+
+    button {
+        @apply bg-slate-400 p-2 rounded-lg text-white cursor-pointer hover:bg-slate-500;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl font-bold text-slate-500;
+    }
+
+    p {
+        @apply text-sm text-slate-400;
+    }
+
+    span {
+        @apply text-sm text-slate-500;
+    }
+}
+
+.not-animation {
+    animation: animate-not;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate-not {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(40deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

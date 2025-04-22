@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            color: #3a7d44;
+            margin-bottom: 30px;
+        }
+        
+        .game-container {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+        
+        .board {
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            grid-gap: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 5px;
+        }
+        
+        .tile {
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            background-color: #ddd;
+            border: 2px solid #bbb;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .tile[data-state="correct"] {
+            background-color: #6aaa64;
+            color: white;
+            border-color: #6aaa64;
+        }
+        
+        .tile[data-state="present"] {
+            background-color: #c9b458;
+            color: white;
+            border-color: #c9b458;
+        }
+        
+        .tile[data-state="absent"] {
+            background-color: #787c7e;
+            color: white;
+            border-color: #787c7e;
+        }
+        
+        .keyboard {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 20px;
+        }
+        
+        .keyboard-row {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .key {
+            min-width: 30px;
+            height: 50px;
+            padding: 0 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #d3d6da;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        
+        .key[data-state="correct"] {
+            background-color: #6aaa64;
+            color: white;
+        }
+        
+        .key[data-state="present"] {
+            background-color: #c9b458;
+            color: white;
+        }
+        
+        .key[data-state="absent"] {
+            background-color: #787c7e;
+            color: white;
+        }
+        
+        .big-key {
+            flex-grow: 1.5;
+            font-size: 0.8rem;
+        }
+        
+        .message {
+            height: 30px;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #3a7d44;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wordle</h1>
+    
+    <div class="game-container">
+        <div class="message" id="message"></div>
+        
+        <div class="board" id="board"></div>
+        
+        <div class="keyboard">
+            <div class="keyboard-row">
+                <button class="key" data-key="ქ">ქ</button>
+                <button class="key" data-key="წ">წ</button>
+                <button class="key" data-key="ე">ე</button>
+                <button class="key" data-key="რ">რ</button>
+                <button class="key" data-key="ტ">ტ</button>
+                <button class="key" data-key="ყ">ყ</button>
+                <button class="key" data-key="უ">უ</button>
+                <button class="key" data-key="ი">ი</button>
+                <button class="key" data-key="ო">ო</button>
+                <button class="key" data-key="პ">პ</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key" data-key="ა">ა</button>
+                <button class="key" data-key="ს">ს</button>
+                <button class="key" data-key="დ">დ</button>
+                <button class="key" data-key="ფ">ფ</button>
+                <button class="key" data-key="გ">გ</button>
+                <button class="key" data-key="ჰ">ჰ</button>
+                <button class="key" data-key="ჯ">ჯ</button>
+                <button class="key" data-key="კ">კ</button>
+                <button class="key" data-key="ლ">ლ</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key big-key" id="enter">Enter</button>
+                <button class="key" data-key="ზ">ზ</button>
+                <button class="key" data-key="ხ">ხ</button>
+                <button class="key" data-key="ვ">ვ</button>
+                <button class="key" data-key="ბ">ბ</button>
+                <button class="key" data-key="ნ">ნ</button>
+                <button class="key" data-key="მ">მ</button>
+                <button class="key big-key" id="backspace">⌫</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const board = document.getElementById('board');
+            const messageEl = document.getElementById('message');
+            const keyboardKeys = document.querySelectorAll('.key[data-key]');
+            const enterKey = document.getElementById('enter');
+            const backspaceKey = document.getElementById('backspace');
+            
+            let targetWord = '';
+            let currentRow = 0;
+            let currentTile = 0;
+            let gameOver = false;
+            const ROWS = 6;
+            const TILES_PER_ROW = 5;
+            
+            function initBoard() {
+                board.innerHTML = '';
+                
+                for (let i = 0; i < ROWS; i++) {
+                    const row = document.createElement('div');
+                    row.className = 'row';
+                    
+                    for (let j = 0; j < TILES_PER_ROW; j++) {
+                        const tile = document.createElement('div');
+                        tile.className = 'tile';
+                        tile.dataset.state = '';
+                        row.appendChild(tile);
+                    }
+                    
+                    board.appendChild(row);
+                }
+            }
+            
+           
+            async function fetchDailyWord() {
+                try {
+                    const response = await fetch('http://localhost:3001/api/daily-word');
+                    const data = await response.json();
+                    targetWord = data.word.toLowerCase();
+                    console.log('Target word:', targetWord); 
+                } catch (err) {
+                    console.error('Error fetching daily word:', err);
+                    targetWord = 'სახლი';
+                }
+            }
+            
+          
+            async function validateWord(word) {
+                try {
+                    const response = await fetch('http://localhost:3001/api/validate-word', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ word })
+                    });
+                    const data = await response.json();
+                    return data.valid;
+                } catch (err) {
+                    console.error('Error validating word:', err);
+                    return true; 
+                }
+            }
+            
+            function setupKeyboard() {
+                keyboardKeys.forEach(key => {
+                    key.addEventListener('click', () => {
+                        if (gameOver) return;
+                        if (currentTile < TILES_PER_ROW) {
+                            const tile = board.children[currentRow].children[currentTile];
+                            tile.textContent = key.dataset.key;
+                            currentTile++;
+                        }
+                    });
+                });
+                
+                enterKey.addEventListener('click', async () => {
+                    if (gameOver || currentTile !== TILES_PER_ROW) return;
+                    
+                    const row = board.children[currentRow];
+                    let guess = '';
+                    
+                    for (let i = 0; i < TILES_PER_ROW; i++) {
+                        guess += row.children[i].textContent.toLowerCase();
+                    }
+                    
+                    const isValid = await validateWord(guess);
+                    
+                    if (!isValid) {
+                        showMessage('ასეთი სიტყვა არ არსებობს');
+                        return;
+                    }
+                    
+                    checkGuess(guess, row);
+                });
+                
+                backspaceKey.addEventListener('click', () => {
+                    if (gameOver || currentTile === 0) return;
+                    
+                    currentTile--;
+                    const tile = board.children[currentRow].children[currentTile];
+                    tile.textContent = '';
+                });
+            }
+            
+            document.addEventListener('keydown', async (e) => {
+                if (gameOver) return;
+                
+                if (e.key === 'Enter') {
+                    if (currentTile !== TILES_PER_ROW) return;
+                    
+                    const row = board.children[currentRow];
+                    let guess = '';
+                    
+                    for (let i = 0; i < TILES_PER_ROW; i++) {
+                        guess += row.children[i].textContent.toLowerCase();
+                    }
+                    
+                    const isValid = await validateWord(guess);
+                    
+                    if (!isValid) {
+                        showMessage('ასეთი სიტყვა არ არსებობს');
+                        return;
+                    }
+                    
+                    checkGuess(guess, row);
+                } else if (e.key === 'Backspace') {
+                    if (currentTile === 0) return;
+                    
+                    currentTile--;
+                    const tile = board.children[currentRow].children[currentTile];
+                    tile.textContent = '';
+                } else if (/^[ა-ჰ]$/.test(e.key.toLowerCase())) {
+                    if (currentTile < TILES_PER_ROW) {
+                        const tile = board.children[currentRow].children[currentTile];
+                        tile.textContent = e.key;
+                        currentTile++;
+                    }
+                }
+            });
+            
+            function checkGuess(guess, row) {
+                const targetLetters = targetWord.split('');
+                const guessLetters = guess.split('');
+                const result = [];
+                
+                for (let i = 0; i < TILES_PER_ROW; i++) {
+                    if (guessLetters[i] === targetLetters[i]) {
+                        result[i] = 'correct';
+                        targetLetters[i] = null; 
+                    }
+                }
+                
+                for (let i = 0; i < TILES_PER_ROW; i++) {
+                    if (result[i]) continue;
+                    
+                    const index = targetLetters.indexOf(guessLetters[i]);
+                    if (index !== -1) {
+                        result[i] = 'present';
+                        targetLetters[index] = null;
+                    } else {
+                        result[i] = 'absent';
+                    }
+                }
+                
+                for (let i = 0; i < TILES_PER_ROW; i++) {
+                    const tile = row.children[i];
+             
+                    const key = document.querySelector(`.key[data-key="${tile.textContent}"]`);
+                    if (!key.dataset.state || key.dataset.state === 'absent') {
+                        key.dataset.state = result[i];
+                    }
+                }
+                
+       
+                if (guess === targetWord) {
+                    showMessage('გილოცავთ! თქვენ მოიგეთ!');
+                    gameOver = true;
+                } else if (currentRow === ROWS - 1) {
+                    showMessage(`თამაში დასრულდა! სწორი სიტყვა იყო: ${targetWord}`);
+                    gameOver = true;
+                } else {
+                    currentRow++;
+                    currentTile = 0;
+                }
+            }
+    
+            function showMessage(msg) {
+                messageEl.textContent = msg;
+                setTimeout(() => {
+                    messageEl.textContent = '';
+                }, 3000);
+            }
+            
+      
+            async function initGame() {
+                initBoard();
+                await fetchDailyWord();
+                setupKeyboard();
+            }
+            
+            initGame();
+        });
+    </script>
+</body>
+</html>
+
+#ხვა ნაირად ვერ ვქენი ძნელი დავალებაა ძალიან
